@@ -76,17 +76,27 @@ export default function TrackPage() {
             <div className="flex">
               <div className="w-1/2 text-2xl">
                 <p>選擇產品</p>
-                <option className=" border">
+                <select className="w-1/2 border-2">
                   <option value="">全部</option>
-                  <option value="套��">套��</option>
-                  <option value="��排">��排</option>
-                  <option value="����">����</option>
-                  <option value="������">������</option>
-                  <option value="其他">其他</option>
-                </option>
+                  <option value="a">炸</option>
+                  <option value="b">烤</option>
+                  <option value="c">蒸</option>
+                  <option value="d">炒</option>
+                  <option value="d">煨</option>
+                </select>
               </div>
 
-              <div className="w-1/2 text-2xl">產品列表</div>
+              <div className="w-1/2 text-2xl">
+                <p>產品列表</p>
+                <select className="w-1/2 border-2">
+                  <option value="">全部</option>
+                  <option value="a">炸</option>
+                  <option value="b">烤</option>
+                  <option value="c">蒸</option>
+                  <option value="d">炒</option>
+                  <option value="d">煨</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
