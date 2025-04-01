@@ -89,13 +89,18 @@ export default function TrackPage() {
     <div className="w-screen h-screen text-black font-mono font-bold">
       <main className="w-full h-full bg-[#2c4457] grid grid-cols-2 grid-rows-2 gap-2 p-4">
         {/* 櫃台接單 */}
-        <div className="bg-amber-200 p-4 rounded-xl overflow-y-auto">
-          <h2 className="text-xl mb-2">櫃台接單</h2>
-          <ul className="space-y-1">
+        <div className="w-full h-full bg-amber-200 px-4 rounded-xl overflow-y-auto">
+          <h2 className="sticky top-0 bg-amber-200 z-10 text-xl py-2">
+            櫃台接單
+          </h2>
+          <ul className="mt-8 space-y-1">
             {counterOrders.map((item, index) => (
               <li key={item.order_id} className="bg-white p-2 rounded shadow">
-                <div>
-                  #{item.order_id} - {item.item_name} x {item.quantity}
+                <div className="flex justify-between">
+                  <div>
+                    #{item.order_id} - {item.item_name} x {item.quantity}
+                  </div>
+                  <div>#{item.status}</div>
                 </div>
               </li>
             ))}
@@ -103,13 +108,16 @@ export default function TrackPage() {
         </div>
 
         {/* 廚房接單 */}
-        <div className="bg-fuchsia-200 p-4 rounded-xl overflow-y-auto">
-          <h2 className="text-xl mb-2">廚房接單</h2>
-          <ul className="space-y-1">
+        <div className="bg-fuchsia-200 px-4 rounded-xl overflow-y-auto">
+          <h2 className="sticky top-0 bg-fuchsia-200 z-10 text-xl">廚房接單</h2>
+          <ul className="mt-8 space-y-1">
             {kitchenOrders.map((item, index) => (
               <li key={item.order_id} className="bg-white p-2 rounded shadow">
-                <div>
-                  #{item.order_id} - {item.item_name} x {item.quantity}
+                <div className="flex justify-between">
+                  <div>
+                    #{item.order_id} - {item.item_name} x {item.quantity}
+                  </div>
+                  <div>#{item.status}</div>
                 </div>
               </li>
             ))}
@@ -117,9 +125,9 @@ export default function TrackPage() {
         </div>
 
         {/* 廚房出單 */}
-        <div className="bg-lime-200 p-4 rounded-xl overflow-y-auto">
-          <h2 className="text-xl mb-2">廚房完成</h2>
-          <ul className="space-y-1">
+        <div className="bg-lime-200 px-4 rounded-xl overflow-y-auto">
+          <h2 className="sticky top-0 bg-lime-200 z-10 text-xl">廚房完成</h2>
+          <ul className="mt-8 space-y-1">
             {completedOrders.map((item, index) => (
               <li key={item.order_id} className="bg-white p-2 rounded shadow">
                 <div>
@@ -131,9 +139,9 @@ export default function TrackPage() {
         </div>
 
         {/* 櫃台出餐 */}
-        <div className="bg-blue-200 p-4 rounded-xl overflow-y-auto">
-          <h2 className="text-xl mb-2">櫃台出餐</h2>
-          <ul className="space-y-1">
+        <div className="bg-blue-200 px-4 rounded-xl overflow-y-auto">
+          <h2 className="sticky top-0 bg-blue-200 z-10 text-xl">櫃台出餐</h2>
+          <ul className="mt-8 space-y-1">
             {servedOrders.map((item, index) => (
               <li key={item.order_id} className="bg-white p-2 rounded shadow">
                 <div>
