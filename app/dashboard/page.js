@@ -158,8 +158,10 @@ export default function TrackPage() {
                         return (
                           <li
                             key={item.order_id}
-                            className={`flex justify-between p-4 border-b ${
-                              isSelected ? "bg-red-400/80" : ""
+                            className={` flex justify-between p-4 border-b ${
+                              isSelected
+                                ? "bg-red-400/80  dark:bg-yellow-400"
+                                : ""
                             }`}
                           >
                             {item.item_name}
